@@ -1,5 +1,5 @@
 FROM wattasn/meteord:base
 MAINTAINER MeteorHacks Pvt Ltd.
 
-ONBUILD COPY ./ /app
+ONBUILD COPY ./ /
 ONBUILD RUN bash $METEORD_DIR/on_build.sh
