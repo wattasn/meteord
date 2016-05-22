@@ -7,4 +7,3 @@ apt-get update
 
 apt-get install -y mongodb-org
 
-mkdir -p /data/db/
