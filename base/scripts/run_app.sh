@@ -1,5 +1,10 @@
 set -e
 
+#start mongod
+service mongod start
+export MONGO_URL=mongodb://127.0.0.1:27017
+
+
 if [ -d /bundle ]; then
   cd /bundle
   tar xzf *.tar.gz
@@ -36,14 +41,6 @@ if [[ $DELAY ]]; then
   echo "Delaying startup for $DELAY seconds"
   sleep $DELAY
 fi
-
-# Set mongo url to env
-if [[ $MONGO_URL ]]; then
-else
-    service mongod start
-    export MONGO_URL=mongodb://127.0.0.1:27017
-fi
-
 
 # Honour already existing PORT setup
 export PORT=${PORT:-80}
