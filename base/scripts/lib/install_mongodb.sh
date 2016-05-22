@@ -6,3 +6,5 @@ echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.0 multiverse" 
 apt-get update
 
 apt-get install -y mongodb-org
+
+mkdir -p /data/db/
