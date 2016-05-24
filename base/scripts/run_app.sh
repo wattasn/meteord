@@ -3,11 +3,11 @@ set -e
 #start mongod
 mongod --fork --logpath /var/log/mongodb.log --logappend
 
-if [[ !$MONGO_URL ]]; then
+if [[ ! $MONGO_URL ]]; then
   export MONGO_URL=mongodb://127.0.0.1:27017
 fi
 
-if [[ !$ROOT_URL ]]; then
+if [[ ! $ROOT_URL ]]; then
   export ROOT_URL=http://127.0.0.1
 fi
 
