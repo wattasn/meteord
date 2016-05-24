@@ -2,9 +2,14 @@ set -e
 
 #start mongod
 mongod --fork --logpath /var/log/mongodb.log --logappend
-export MONGO_URL=mongodb://127.0.0.1:27017
 
-export ROOT_URL=http://172.17.0.1
+if [[ !$MONGO_URL ]]; then
+  export MONGO_URL=mongodb://127.0.0.1:27017
+fi
+
+if [[ !$ROOT_URL ]]; then
+  export ROOT_URL=http://127.0.0.1
+fi
 
 if [ -d /bundle ]; then
   cd /bundle
