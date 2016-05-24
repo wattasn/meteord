@@ -24,8 +24,3 @@ rm /usr/local/bin/meteor
 # install npm packages
 npm install -g grunt-cli
 
-cd /
-mkdir -p /data/db/
-git clone https://github.com/chriseth/browser-solidity.git
-cd browser-solidity/assets/js/
-cp mode-solidity.js /built_app/programs/web.browser/packages/arch_ace-editor/ace-builds/src-noconflict
